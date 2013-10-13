@@ -1,0 +1,19 @@
+concerts.each do |concert|
+	# name of the show
+	puts concert.at_css('.headliners')
+	
+	# date of the show
+	puts concert.at_css('.dates')
+
+	# time of the show
+	puts concert.at_css('.times')
+
+	# sold or price
+
+	if !concert.at_css('.price-range').nil?
+		puts data.at_css('.price-range')
+	else
+		puts "SOLD OUT"
+	end
+
+end
